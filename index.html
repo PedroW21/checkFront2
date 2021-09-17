@@ -1,69 +1,76 @@
 <!DOCTYPE html>
-<html lang = "pt-br">
+<html lang="pt-br">
+
 <head>
-    <meta charset = "UTF-8">
-    <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
-    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Formulário Brasília</title>
 </head>
 
 <body>
-   
+
     <header>
         <h2>Formulário de Cadastro</h2>
     </header>
 
-    <main class = "container">
+    <main class="container">
         <form>
-            <fieldset class = "personal-data">
+            <fieldset class="personal-data">
                 <legend> <strong> Dados pessoais </strong> </legend>
-                
-                    <label for  = "nome">Nome</label>
-                    <input type = "name" name = "name" id = "name" maxlength = "100" placeholder = "Insira seu nome" required>
-                    
-                    <label for = "email">Email</label>
-                    <input id  = "email" type = "email" name = "email" placeholder = "Insira seu email" required>
 
-                    <label for = "telephone">Telefone </label>
-                    <input id  = "telephone" name = "telephone" type = "text" placeholder = "Insira seu número" onkeypress = "return event.charCode >= 48 && event.charCode <= 57">
-                    
-                    <label for = "birth-date">Data de Nascimento</label>
-                    <input id  = "birth-date" type = "date" name = "birth-date">
-            
-                    <legend>Menor de Idade?</legend>
-                    
-                    <label class = "button">Sim</label>
-                    <input type  = "radio" name = "age" id = "age">
-                   
-                    <label class = "button">Não</label>
-                    <input type  = "radio" name = "age" id = "age">
+                <label for="nome">Nome</label>
+                <input type="name" name="name" id="name" maxlength="100" placeholder="Insira seu nome" required>
+
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" placeholder="Insira seu email" required>
+
+                <label for="telephone">Telefone </label>
+                <input id="telephone" name="telephone" type="text" placeholder="Insira seu número"
+                    onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+
+                <label for="birth-date">Data de Nascimento</label>
+                <input id="birth-date" type="date" name="birth-date">
+
+                <legend>Menor de Idade?</legend>
+                <div class="sim">
+                    <input type="radio" name="age" id="age1">
+                    <label class="idade" for="age1">Sim</label>
+                </div>
+
+                <div class="nao">
+                    <input type="radio" name="age" id="age2">
+                    <label class="idade" for="age2">Não</label>
+                </div>
             </fieldset>
 
-            <fieldset class = "questions">
+            <fieldset class="questions">
                 <legend><strong>Pontos de Interesse</strong></legend>
-                <select name  = "interesses" id = "interesses">
-                <option value = "">Escolha um ponto de interesse</option>
-                <optgroup label = "Brasilia">
-                <option value = "praca">Praça dos 3 Poderes</option>
-                <option value = "catedral">Catedral de Brasilia</option>
-                <option value = "lago">Lago Paranoá</option>
-                </optgroup>
+                <select name="interesses" id="interesses">
+                    <option value="">Escolha um ponto de interesse</option>
+                    <optgroup label="Brasilia">
+                        <option value="praca">Praça dos 3 Poderes</option>
+                        <option value="catedral">Catedral de Brasilia</option>
+                        <option value="lago">Lago Paranoá</option>
+                    </optgroup>
                 </select>
             </fieldset>
 
-            <fieldset class = "grid-container">
+            <fieldset class="grid-container">
                 <legend> <strong>Razão da viagem </strong> </legend>
-                <label class = "grid-item">Turistar</label>
-                <input class = "button" type = "checkbox">
-                <label class = "grid-item">Residir</label>
-                <input class = "button" type = "checkbox">
-                <label class = "grid-item">Estudar</label>
-                <input class = "button" type = "checkbox">
+                <input id="turistar" class="button" type="checkbox">
+                <label for="turistar" class="check">Turistar</label>
+
+                <input id="residir" class="button" type="checkbox">
+                <label for="residir" class="check">Residir</label>
+
+                <input id="estudar" class="button" type="checkbox">
+                <label for="estudar" class="check">Estudar</label>
             </fieldset>
-                    
-            <button type = "reset">Limpar</button>
-            <button type = "submit">Enviar</button>
+
+            <button type="reset">Limpar</button>
+            <button type="submit">Enviar</button>
         </form>
     </main>
 
@@ -71,4 +78,5 @@
         <p>© Anna Karla, Pedro Verner e Mauricio Gregory</p>
     </footer>
 </body>
+
 </html>
